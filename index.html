@@ -1,45 +1,74 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio de Mohamed</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ilyes | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <h1>Mohamed Ilyes Rahim</h1>
-        <nav>
-            <a href="#about">À propos</a>
-            <a href="#projects">Projets</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Header -->
+  <header class="bg-gray-900 text-white py-8">
+    <div class="max-w-5xl mx-auto text-center">
+      <h1 class="text-4xl font-bold">👋 Hi, I'm Mohamed Ilyes</h1>
+      <p class="mt-2 text-lg">Fullstack Developer | PHP & JavaScript</p>
+      <nav class="mt-4 space-x-6">
+        <a href="#projects" class="hover:text-blue-400">Projects</a>
+        <a href="#contact" class="hover:text-blue-400">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <section id="about">
-        <h2>À propos de moi</h2>
-        <p>Développeur frontend junior passionné par la création d'interfaces modernes et réactives.</p>
-    </section>
+  <!-- Projects -->
+  <section id="projects" class="max-w-5xl mx-auto py-12 px-4">
+    <h2 class="text-3xl font-bold mb-8 text-center">🚀 My Projects</h2>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Project card -->
+      <div class="bg-white rounded-2xl shadow p-6 hover:scale-105 transition">
+        <h3 class="text-xl font-semibold mb-2">Project 1</h3>
+        <p class="mb-3 text-sm text-gray-600">A web app built with Laravel and Vue.js.</p>
+        <a href="#" class="text-blue-600 font-medium hover:underline">View on GitHub →</a>
+      </div>
+      <!-- Project card -->
+      <div class="bg-white rounded-2xl shadow p-6 hover:scale-105 transition">
+        <h3 class="text-xl font-semibold mb-2">Project 2</h3>
+        <p class="mb-3 text-sm text-gray-600">Portfolio site built with WordPress.</p>
+        <a href="#" class="text-blue-600 font-medium hover:underline">Visit website →</a>
+      </div>
+      <!-- Project card -->
+      <div class="bg-white rounded-2xl shadow p-6 hover:scale-105 transition">
+        <h3 class="text-xl font-semibold mb-2">Project 3</h3>
+        <p class="mb-3 text-sm text-gray-600">API service for mobile apps.</p>
+        <a href="#" class="text-blue-600 font-medium hover:underline">View on GitHub →</a>
+      </div>
+    </div>
+  </section>
 
-    <section id="projects">
-        <h2>Mes projets</h2>
-        <div class="project">
-            <h3>Projet 1</h3>
-            <p>Description du projet 1.</p>
-        </div>
-        <div class="project">
-            <h3>Projet 2</h3>
-            <p>Description du projet 2.</p>
-        </div>
-    </section>
+  <!-- Contact -->
+  <section id="contact" class="bg-gray-200 py-12">
+    <div class="max-w-3xl mx-auto text-center px-4">
+      <h2 class="text-3xl font-bold mb-6">📩 Contact Me</h2>
+      <p>Email: 
+        <a href="mailto:ilyes@example.com" class="text-blue-600 hover:underline">
+          ilyes@example.com
+        </a>
+      </p>
+      <p>GitHub: 
+        <a href="https://github.com/rahimmohamedilyes" target="_blank" class="text-blue-600 hover:underline">
+          rahimmohamedilyes
+        </a>
+      </p>
+      <p>LinkedIn: 
+        <a href="#" target="_blank" class="text-blue-600 hover:underline">
+          My LinkedIn
+        </a>
+      </p>
+    </div>
+  </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email : <a href="mailto:tonemail@example.com">tonemail@example.com</a></p>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Mohamed Ilyes Rahim</p>
-    </footer>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center py-6">
+    <p>© 2025 Mohamed Ilyes. All rights reserved.</p>
+  </footer>
 </body>
 </html>
