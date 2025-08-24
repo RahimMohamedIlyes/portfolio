@@ -13,18 +13,27 @@
   <!-- Header -->
   <header class="bg-gray-900 text-white py-8">
     <div class="max-w-5xl mx-auto text-center">
-      <h1 class="text-4xl font-bold">👋 <span class="lang en">Hi, I'm Mohamed Ilyes</span><span class="lang fr hidden-lang">Salut, je suis Mohamed Ilyes</span></h1>
+      <h1 class="text-4xl font-bold">
+        <span class="lang en">Hi, I'm Mohamed Ilyes</span>
+        <span class="lang fr hidden-lang">Salut, je suis Mohamed Ilyes</span>
+      </h1>
       <p class="mt-2 text-lg">
         <span class="lang en">Fullstack Developer | PHP & JavaScript</span>
         <span class="lang fr hidden-lang">Développeur Fullstack | PHP & JavaScript</span>
       </p>
       <nav class="mt-4 space-x-6">
-        <a href="#projects" class="hover:text-blue-400"><span class="lang en">Projects</span><span class="lang fr hidden-lang">Projets</span></a>
-        <a href="#contact" class="hover:text-blue-400"><span class="lang en">Contact</span><span class="lang fr hidden-lang">Contact</span></a>
+        <a href="#projects" class="hover:text-blue-400">
+          <span class="lang en">Projects</span>
+          <span class="lang fr hidden-lang">Projets</span>
+        </a>
+        <a href="#contact" class="hover:text-blue-400">
+          <span class="lang en">Contact</span>
+          <span class="lang fr hidden-lang">Contact</span>
+        </a>
       </nav>
       <!-- Language Switch -->
       <button id="toggleLang" class="mt-4 px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded text-white font-medium">
-        FR 🇫🇷 / EN 🇬🇧
+        EN 🇬🇧
       </button>
     </div>
   </header>
@@ -36,7 +45,6 @@
       <span class="lang fr hidden-lang">🚀 Mes Projets</span>
     </h2>
     <ul class="space-y-6">
-      
       <!-- Project 1 -->
       <li class="bg-white rounded-2xl shadow p-6">
         <h3 class="text-xl font-semibold mb-2">📌 School Management System</h3>
@@ -64,7 +72,6 @@
           <li><span class="lang en">Integrated contact form with PHP backend</span><span class="lang fr hidden-lang">Formulaire de contact relié à un backend PHP</span></li>
         </ul>
       </li>
-
     </ul>
   </section>
 
@@ -92,25 +99,35 @@
     <p>© 2025 Mohamed Ilyes. All rights reserved.</p>
   </footer>
 
-  <!-- Script to toggle language -->
+  <!-- Script to toggle language and save in localStorage -->
   <script>
     const toggleBtn = document.getElementById("toggleLang");
-    let currentLang = "en";
+    let currentLang = localStorage.getItem("lang") || "en";
 
-    toggleBtn.addEventListener("click", () => {
+    const setLanguage = (lang) => {
       const enElems = document.querySelectorAll(".lang.en");
       const frElems = document.querySelectorAll(".lang.fr");
 
-      if (currentLang === "en") {
-        enElems.forEach(el => el.classList.add("hidden-lang"));
-        frElems.forEach(el => el.classList.remove("hidden-lang"));
-        currentLang = "fr";
-      } else {
-        frElems.forEach(el => el.classList.add("hidden-lang"));
+      if(lang === "en") {
         enElems.forEach(el => el.classList.remove("hidden-lang"));
-        currentLang = "en";
+        frElems.forEach(el => el.classList.add("hidden-lang"));
+        toggleBtn.textContent = "EN 🇬🇧";
+      } else {
+        frElems.forEach(el => el.classList.remove("hidden-lang"));
+        enElems.forEach(el => el.classList.add("hidden-lang"));
+        toggleBtn.textContent = "FR 🇫🇷";
       }
+      localStorage.setItem("lang", lang);
+      currentLang = lang;
+    }
+
+    toggleBtn.addEventListener("click", () => {
+      const newLang = currentLang === "en" ? "fr" : "en";
+      setLanguage(newLang);
     });
+
+    // Set language on page load
+    setLanguage(currentLang);
   </script>
 </body>
 </html>
