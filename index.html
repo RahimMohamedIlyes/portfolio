@@ -1,67 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ilyes | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hidden-lang { display: none; }
+  </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
   <!-- Header -->
   <header class="bg-gray-900 text-white py-8">
     <div class="max-w-5xl mx-auto text-center">
-      <h1 class="text-4xl font-bold">👋 Hi, I'm Mohamed Ilyes</h1>
-      <p class="mt-2 text-lg">Fullstack Developer | PHP & JavaScript</p>
+      <h1 class="text-4xl font-bold">👋 <span class="lang en">Hi, I'm Mohamed Ilyes</span><span class="lang fr hidden-lang">Salut, je suis Mohamed Ilyes</span></h1>
+      <p class="mt-2 text-lg">
+        <span class="lang en">Fullstack Developer | PHP & JavaScript</span>
+        <span class="lang fr hidden-lang">Développeur Fullstack | PHP & JavaScript</span>
+      </p>
       <nav class="mt-4 space-x-6">
-        <a href="#projects" class="hover:text-blue-400">Projects</a>
-        <a href="#contact" class="hover:text-blue-400">Contact</a>
+        <a href="#projects" class="hover:text-blue-400"><span class="lang en">Projects</span><span class="lang fr hidden-lang">Projets</span></a>
+        <a href="#contact" class="hover:text-blue-400"><span class="lang en">Contact</span><span class="lang fr hidden-lang">Contact</span></a>
       </nav>
+      <!-- Language Switch -->
+      <button id="toggleLang" class="mt-4 px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded text-white font-medium">
+        FR 🇫🇷 / EN 🇬🇧
+      </button>
     </div>
   </header>
 
   <!-- Projects -->
   <section id="projects" class="max-w-5xl mx-auto py-12 px-4">
-    <h2 class="text-3xl font-bold mb-8 text-center">🚀 My Projects</h2>
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      <!-- Project card -->
-      <div class="bg-white rounded-2xl shadow p-6 hover:scale-105 transition">
-        <h3 class="text-xl font-semibold mb-2">Project 1</h3>
-        <p class="mb-3 text-sm text-gray-600">A web app built with Laravel and Vue.js.</p>
-        <a href="#" class="text-blue-600 font-medium hover:underline">View on GitHub →</a>
-      </div>
-      <!-- Project card -->
-      <div class="bg-white rounded-2xl shadow p-6 hover:scale-105 transition">
-        <h3 class="text-xl font-semibold mb-2">Project 2</h3>
-        <p class="mb-3 text-sm text-gray-600">Portfolio site built with WordPress.</p>
-        <a href="#" class="text-blue-600 font-medium hover:underline">Visit website →</a>
-      </div>
-      <!-- Project card -->
-      <div class="bg-white rounded-2xl shadow p-6 hover:scale-105 transition">
-        <h3 class="text-xl font-semibold mb-2">Project 3</h3>
-        <p class="mb-3 text-sm text-gray-600">API service for mobile apps.</p>
-        <a href="#" class="text-blue-600 font-medium hover:underline">View on GitHub →</a>
-      </div>
-    </div>
+    <h2 class="text-3xl font-bold mb-8 text-center">
+      <span class="lang en">🚀 My Projects</span>
+      <span class="lang fr hidden-lang">🚀 Mes Projets</span>
+    </h2>
+    <ul class="space-y-6">
+      
+      <!-- Project 1 -->
+      <li class="bg-white rounded-2xl shadow p-6">
+        <h3 class="text-xl font-semibold mb-2">📌 School Management System</h3>
+        <p class="text-gray-600 mb-3">
+          <span class="lang en">A web platform for teachers, parents and students.</span>
+          <span class="lang fr hidden-lang">Une plateforme web pour enseignants, parents et élèves.</span>
+        </p>
+        <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+          <li><span class="lang en">Developed student grade management with Laravel</span><span class="lang fr hidden-lang">Développé la gestion des notes avec Laravel</span></li>
+          <li><span class="lang en">Created parent dashboard to view children’s reports</span><span class="lang fr hidden-lang">Créé un tableau de bord parents pour voir les bulletins</span></li>
+          <li><span class="lang en">Built teacher notes & attendance tracking module</span><span class="lang fr hidden-lang">Construit un module de notes et suivi d’assiduité des professeurs</span></li>
+        </ul>
+      </li>
+
+      <!-- Project 2 -->
+      <li class="bg-white rounded-2xl shadow p-6">
+        <h3 class="text-xl font-semibold mb-2">📌 Personal Portfolio</h3>
+        <p class="text-gray-600 mb-3">
+          <span class="lang en">A responsive portfolio website.</span>
+          <span class="lang fr hidden-lang">Un site portfolio responsive.</span>
+        </p>
+        <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+          <li><span class="lang en">Designed with TailwindCSS</span><span class="lang fr hidden-lang">Conçu avec TailwindCSS</span></li>
+          <li><span class="lang en">Responsive grid layout for projects</span><span class="lang fr hidden-lang">Mise en page responsive en grille pour les projets</span></li>
+          <li><span class="lang en">Integrated contact form with PHP backend</span><span class="lang fr hidden-lang">Formulaire de contact relié à un backend PHP</span></li>
+        </ul>
+      </li>
+
+    </ul>
   </section>
 
   <!-- Contact -->
   <section id="contact" class="bg-gray-200 py-12">
     <div class="max-w-3xl mx-auto text-center px-4">
-      <h2 class="text-3xl font-bold mb-6">📩 Contact Me</h2>
-      <p>Email: 
-        <a href="mailto:ilyes@example.com" class="text-blue-600 hover:underline">
-          ilyes@example.com
-        </a>
-      </p>
+      <h2 class="text-3xl font-bold mb-6">
+        <span class="lang en">📩 Contact Me</span>
+        <span class="lang fr hidden-lang">📩 Me Contacter</span>
+      </h2>
+      <p>Email: <a href="mailto:ilyes@example.com" class="text-blue-600 hover:underline">ilyes@example.com</a></p>
       <p>GitHub: 
         <a href="https://github.com/rahimmohamedilyes" target="_blank" class="text-blue-600 hover:underline">
           rahimmohamedilyes
         </a>
       </p>
       <p>LinkedIn: 
-        <a href="#" target="_blank" class="text-blue-600 hover:underline">
-          My LinkedIn
-        </a>
+        <a href="#" target="_blank" class="text-blue-600 hover:underline">My LinkedIn</a>
       </p>
     </div>
   </section>
@@ -70,5 +91,26 @@
   <footer class="bg-gray-900 text-white text-center py-6">
     <p>© 2025 Mohamed Ilyes. All rights reserved.</p>
   </footer>
+
+  <!-- Script to toggle language -->
+  <script>
+    const toggleBtn = document.getElementById("toggleLang");
+    let currentLang = "en";
+
+    toggleBtn.addEventListener("click", () => {
+      const enElems = document.querySelectorAll(".lang.en");
+      const frElems = document.querySelectorAll(".lang.fr");
+
+      if (currentLang === "en") {
+        enElems.forEach(el => el.classList.add("hidden-lang"));
+        frElems.forEach(el => el.classList.remove("hidden-lang"));
+        currentLang = "fr";
+      } else {
+        frElems.forEach(el => el.classList.add("hidden-lang"));
+        enElems.forEach(el => el.classList.remove("hidden-lang"));
+        currentLang = "en";
+      }
+    });
+  </script>
 </body>
 </html>
