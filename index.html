@@ -32,7 +32,7 @@
         <span class="lang fr">Contact</span>
       </a>
     </nav>
-    <button id="toggleLang" class="mt-4 px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded text-white font-medium">FR 🇫🇷</button>
+    <button id="toggleLang" class="mt-4 px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded text-white font-medium">FR</button>
   </div>
 </header>
 
@@ -82,11 +82,11 @@ const setLanguage = (lang) => {
   if(lang === "en") {
     enElems.forEach(el => el.classList.remove("hidden-lang"));
     frElems.forEach(el => el.classList.add("hidden-lang"));
-    toggleBtn.textContent = "EN 🇬🇧";
+    toggleBtn.textContent = "EN";
   } else {
     frElems.forEach(el => el.classList.remove("hidden-lang"));
     enElems.forEach(el => el.classList.add("hidden-lang"));
-    toggleBtn.textContent = "FR 🇫🇷";
+    toggleBtn.textContent = "FR";
   }
   localStorage.setItem("lang", lang);
   currentLang = lang;
